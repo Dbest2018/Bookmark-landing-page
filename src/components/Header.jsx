@@ -62,6 +62,7 @@ const HeaderButton = styled.button`
   border: none;
   padding: 0.5rem 1.25rem;
   border-radius: 0.25rem;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1);
   transition: all 0.6s;
 
