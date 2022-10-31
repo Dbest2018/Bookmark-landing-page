@@ -119,7 +119,7 @@ const RightBanner = styled.div`
 
   @media (min-width: 1270px) {
     margin-left: 7.5rem;
-    padding: 8.5rem;
+    padding: 9rem;
     margin-top: -6rem;
   }
 `;
