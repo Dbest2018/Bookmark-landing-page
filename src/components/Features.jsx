@@ -130,9 +130,37 @@ const FeaturesBanner = styled.div`
 
 const FMBodyRight = styled.div`
   flex: 1;
+  text-align: center;
+  padding: 2rem;
+  @media (min-width: 750px) {
+    text-align: left;
+    padding-left: 4rem;
+  }
 `;
-const FRightText = styled.div``;
-const FRightTitle = styled.div``;
-const FRightButton = styled.button``;
+const FRightText = styled.div`
+  color: var(--grayish-blue);
+  max-width: 450px;
+`;
+const FRightTitle = styled.div`
+  color: var(--vdark-blue);
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin: 1rem 0;
+`;
+const FRightButton = styled.button`
+  cursor: pointer;
+  display: none;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--soft-blue);
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 750px) {
+    display: block;
+  }
+`;
 
 export default Features;
