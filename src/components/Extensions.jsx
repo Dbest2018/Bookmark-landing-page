@@ -70,12 +70,12 @@ const ExtensionBody = styled.div`
   @media (min-width: 850px) {
     display: flex;
     justify-content: space-between;
-  }
-  section:nth-child(2) {
-    margin-top: 4rem;
-  }
-  section:nth-child(3) {
-    margin-top: 6rem;
+    section:nth-child(2) {
+      margin-top: 4rem;
+    }
+    section:nth-child(3) {
+      margin-top: 6rem;
+    }
   }
 `;
 
