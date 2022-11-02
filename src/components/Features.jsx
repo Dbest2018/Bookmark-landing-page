@@ -22,6 +22,7 @@ const Features = () => {
         <FMainBody>
           <FMBodyLeft>
             <FeaturesImage src={featuresImage} alt="features" />
+            <FeaturesBanner />
           </FMBodyLeft>
           <FMBodyRight>
             <FRightTitle>Bookmark in one click</FRightTitle>
@@ -64,26 +65,72 @@ const FeaturesMain = styled.div``;
 const FMainHeader = styled.div`
   border-bottom: 1px solid var(--grayish-blue);
   margin: 0rem 2rem 3rem;
+  max-width: 700px;
+
+  @media (min-width: 550px) {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem auto 3rem;
+  }
 `;
 const FMHeaderItem = styled.div`
+  cursor: pointer;
   border-top: 1px solid var(--grayish-blue);
   padding: 1rem 0;
   text-align: center;
-  color: var(--vdark-blue);
+  color: var(--grayish-blue);
   font-weight: 500;
 
-  :active {
-    border-bottom: 2px solid var(--soft-red);
+  :active,
+  :hover {
+    color: var(--vdark-blue);
+    border-bottom: 3px solid var(--soft-red);
+  }
+
+  @media (min-width: 550px) {
+    border-top: none;
   }
 `;
 
-const FMainBody = styled.div``;
-const FMBodyLeft = styled.div``;
+const FMainBody = styled.div`
+  @media (min-width: 750px) {
+    display: flex;
+  }
+`;
+const FMBodyLeft = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+`;
 const FeaturesImage = styled.img`
+  width: 100%;
+  align-self: flex-start;
+  padding: 0 2rem;
+  margin-bottom: -11.5rem;
+
+  @media (min-width: 1270px) {
+    padding-left: 7rem;
+  }
+`;
+const FeaturesBanner = styled.div`
   width: 80%;
+  height: 220px;
+  align-self: flex-start;
+  z-index: -1;
+  border-radius: 0px 500px 500px 0px;
+  background-color: var(--soft-blue);
+
+  @media (min-width: 1270px) {
+    height: 300px;
+    margin-top: -3rem;
+  }
 `;
 
-const FMBodyRight = styled.div``;
+const FMBodyRight = styled.div`
+  flex: 1;
+`;
 const FRightText = styled.div``;
 const FRightTitle = styled.div``;
 const FRightButton = styled.button``;
