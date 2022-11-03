@@ -58,7 +58,11 @@ const QHeaderText = styled.div`
 `;
 
 const QuestionsBody = styled.div`
-  margin: 2rem 0;
+  margin: 3rem 0;
+  @media (min-width: 850px) {
+    width: 500px;
+    border-top: 1px solid var(--grayish-blue);
+  }
 `;
 const Question = styled.div`
   display: flex;
