@@ -29,21 +29,28 @@ const CTATitle = styled.div`
   max-width: 350px;
   text-align: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin: 1rem 0;
-  font-weight: 500;
 `;
 
 const CTAForm = styled.form`
   width: 100%;
   display: flex;
+  max-width: 400px;
   flex-direction: column;
+
+  @media (min-width: 550px) {
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 const CTAInput = styled.input`
+  flex: 1;
   outline: none;
   border: none;
   padding: 1rem;
   margin: 1rem 0;
+  color: var(--vdark-blue);
   font-family: "Rubik", san-serif;
   border-radius: 0.25rem;
 
@@ -52,12 +59,17 @@ const CTAInput = styled.input`
   }
 `;
 const CTAButton = styled.button`
+  height: fit-content;
   color: white;
   background-color: var(--soft-red);
   border: none;
   border-radius: 0.25rem;
   padding: 1rem;
   font-family: "Rubik", san-serif;
+
+  @media (min-width: 550px) {
+    margin-left: 1rem;
+  }
 `;
 
 export default CTA;
