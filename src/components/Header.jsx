@@ -129,7 +129,7 @@ const MNavBody = styled.div`
 `;
 const NBodyItem = styled.div`
   border-bottom: 1px solid var(--grayish-blue);
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 `;
 const NBodyButton = styled.button`
   background-color: inherit;
@@ -142,7 +142,7 @@ const NBodyButton = styled.button`
   font-family: "Rubik", san-serif;
   font-size: 1.25rem;
   font-weight: 500;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   border-radius: 0.25rem;
 `;
 const MNavFooter = styled.div`
