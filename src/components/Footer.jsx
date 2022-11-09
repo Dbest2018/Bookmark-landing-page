@@ -25,26 +25,52 @@ const Footer = () => {
 
 const FooterContainer = styled.div`
   background-color: var(--vdark-blue);
-  padding: 2rem 0;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
+
+  @media (min-width: 750px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1270px) {
+    padding: 2rem 7rem;
+  }
 `;
 const FooterLeft = styled.div`
   text-align: center;
+  @media (min-width: 750px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const FLeftLogo = styled.img`
   color: white;
 `;
 const FLeftNav = styled.div`
   margin: 2rem 0;
+
+  @media (min-width: 750px) {
+    margin: 0 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
 `;
 const FLNavItem = styled.div`
   margin-bottom: 1rem;
   color: var(--grayish-blue);
   letter-spacing: 0.1rem;
+  cursor: pointer;
+
+  @media (min-width: 750px) {
+    margin: 0;
+  }
 `;
 
 const FooterRight = styled.div`
@@ -55,6 +81,7 @@ const FooterRight = styled.div`
 `;
 const FRightIcon = styled.img`
   color: white;
+  cursor: pointer;
 `;
 
 export default Footer;
