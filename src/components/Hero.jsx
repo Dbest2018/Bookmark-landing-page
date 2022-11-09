@@ -99,6 +99,8 @@ const HeroFireFox = styled.button`
 
 const HeroRight = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
 `;
 const HeroImage = styled.img`
   width: 95%;
@@ -106,20 +108,14 @@ const HeroImage = styled.img`
 `;
 const RightBanner = styled.div`
   width: 80%;
-  margin-left: 4.4rem;
-  padding: 6rem;
-  border-bottom-left-radius: 6rem;
+  height: 200px;
+  z-index: -1;
+  align-self: flex-end;
   background-color: var(--soft-blue);
-
-  @media (min-width: 1024px) {
-    margin-left: 6rem;
-    padding: 7.5rem;
-    margin-top: -4rem;
-  }
+  border-radius: 500px 0 0 500px;
 
   @media (min-width: 1270px) {
-    margin-left: 7.5rem;
-    padding: 9rem;
+    height: 300px;
     margin-top: -6rem;
   }
 `;
