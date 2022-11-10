@@ -7,7 +7,7 @@ import navFacebook from "../images/icon-facebook.svg";
 import navTwitter from "../images/icon-twitter.svg";
 
 const Header = () => {
-  const [openNav, setOpenNav] = useState(true);
+  const [openNav, setOpenNav] = useState(false);
   return (
     <HeaderContainer>
       {openNav && (
