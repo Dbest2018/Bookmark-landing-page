@@ -50,7 +50,7 @@ const FooterLeft = styled.div`
   }
 `;
 const FLeftLogo = styled.img`
-  color: white;
+  filter: invert(1);
 `;
 const FLeftNav = styled.div`
   margin: 2rem 0;
