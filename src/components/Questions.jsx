@@ -1,8 +1,46 @@
-import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import arrow from "../images/icon-arrow.svg";
+import Answer from "./Answer";
 
 const Questions = () => {
+  const [answers, setAnswers] = useState({
+    answerOne: false,
+    answerTwo: false,
+    answerThree: false,
+    answerFour: false,
+  });
+
+  const showAnswer = (answer) => {
+    switch (answer) {
+      case 1:
+        setAnswers((prevAnswers) => ({
+          ...prevAnswers,
+          answerOne: !prevAnswers.answerOne,
+        }));
+        break;
+      case 2:
+        setAnswers((prevAnswers) => ({
+          ...prevAnswers,
+          answerTwo: !prevAnswers.answerTwo,
+        }));
+        break;
+      case 3:
+        setAnswers((prevAnswers) => ({
+          ...prevAnswers,
+          answerThree: !prevAnswers.answerThree,
+        }));
+        break;
+      case 4:
+        setAnswers((prevAnswers) => ({
+          ...prevAnswers,
+          answerFour: !prevAnswers.answerFour,
+        }));
+        break;
+      default:
+        return;
+    }
+  };
   return (
     <QuestionsContainer>
       <QuestionsHeader>
@@ -15,20 +53,40 @@ const Questions = () => {
       <QuestionsBody>
         <Question>
           <QuestionText>What is Bookmark?</QuestionText>
-          <QuestionIcon src={arrow} alt="arrow dropdown"></QuestionIcon>
+          <QuestionIcon
+            src={arrow}
+            alt="arrow dropdown"
+            onClick={() => showAnswer(1)}
+          ></QuestionIcon>
         </Question>
+        {answers.answerOne && <Answer type={1} />}
         <Question>
           <QuestionText>How can I request a new browser?</QuestionText>
-          <QuestionIcon src={arrow} alt="arrow dropdown"></QuestionIcon>
+          <QuestionIcon
+            src={arrow}
+            alt="arrow dropdown"
+            onClick={() => showAnswer(2)}
+          ></QuestionIcon>
         </Question>
+        {answers.answerTwo && <Answer type={2} />}
         <Question>
           <QuestionText>Is there a mobile app?</QuestionText>
-          <QuestionIcon src={arrow} alt="arrow dropdown"></QuestionIcon>
+          <QuestionIcon
+            src={arrow}
+            alt="arrow dropdown"
+            onClick={() => showAnswer(3)}
+          ></QuestionIcon>
         </Question>
+        {answers.answerThree && <Answer type={3} />}
         <Question>
           <QuestionText>What about other Chromium browsers?</QuestionText>
-          <QuestionIcon src={arrow} alt="arrow dropdown"></QuestionIcon>
+          <QuestionIcon
+            src={arrow}
+            alt="arrow dropdown"
+            onClick={() => showAnswer(4)}
+          ></QuestionIcon>
         </Question>
+        {answers.answerFour && <Answer type={4} />}
       </QuestionsBody>
       <QuestionsButton>More Info</QuestionsButton>
     </QuestionsContainer>
