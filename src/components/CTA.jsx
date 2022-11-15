@@ -1,13 +1,24 @@
-import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 const CTA = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setEmail("");
+  };
   return (
     <CTAContainer>
       <CTAText>35,000+ already joined</CTAText>
       <CTATitle>Stay up-to-date with what we’re doing</CTATitle>
-      <CTAForm>
-        <CTAInput placeholder="Enter your email address" />
+      <CTAForm onSubmit={handleSubmit}>
+        <CTAInput
+          placeholder="Enter your email address"
+          onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          value={email ? email : ""}
+        />
         <CTAButton>Contact Us</CTAButton>
       </CTAForm>
     </CTAContainer>
