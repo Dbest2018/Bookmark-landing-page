@@ -83,6 +83,9 @@ const RightNav = styled.div`
 const NavItem = styled.div`
   margin-right: 2rem;
   cursor: pointer;
+  :hover {
+    color: var(--soft-red);
+  }
 `;
 const HeaderButton = styled.button`
   cursor: pointer;
@@ -93,11 +96,12 @@ const HeaderButton = styled.button`
   padding: 0.5rem 1.25rem;
   border-radius: 0.25rem;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-  transform: scale(1);
-  transition: all 0.6s;
+  transition: all 0.3s ease-in;
 
   :hover {
-    transform: scale(1.2);
+    color: var(--soft-red);
+    background-color: white;
+    border: 1px solid var(--soft-red);
   }
 `;
 const MobileNav = styled.div`
