@@ -77,6 +77,12 @@ const CTAButton = styled.button`
   border-radius: 0.25rem;
   padding: 1rem;
   font-family: "Rubik", san-serif;
+  cursor: pointer;
+  :hover {
+    color: var(--soft-red);
+    background-color: white;
+    border: 1px solid var(--soft-red);
+  }
 
   @media (min-width: 550px) {
     margin-left: 1rem;
