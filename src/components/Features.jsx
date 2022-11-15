@@ -82,9 +82,12 @@ const FMHeaderItem = styled.div`
   font-weight: 500;
 
   :active,
-  :hover {
+  :focus {
     color: var(--vdark-blue);
     border-bottom: 3px solid var(--soft-red);
+  }
+  :hover {
+    color: var(--soft-red);
   }
 
   @media (min-width: 550px) {
