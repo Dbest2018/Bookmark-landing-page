@@ -127,9 +127,13 @@ const Question = styled.div`
   justify-content: space-between;
   padding: 1rem 0;
   border-bottom: 1px solid var(--grayish-blue);
+  color: var(--vdark-blue);
+  cursor: pointer;
+  :hover {
+    color: var(--soft-red);
+  }
 `;
 const QuestionText = styled.div`
-  color: var(--vdark-blue);
   margin-right: 1rem;
 `;
 const QuestionIcon = styled.img`
