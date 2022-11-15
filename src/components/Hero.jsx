@@ -74,11 +74,12 @@ const HeroChrome = styled.button`
   color: white;
   margin-right: 1.5rem;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-  transform: scale(1);
   transition: all 0.6s;
 
   :hover {
-    transform: scale(1.2);
+    color: var(--soft-blue);
+    background-color: white;
+    border: 1px solid var(--soft-blue);
   }
 `;
 const HeroFireFox = styled.button`
@@ -89,11 +90,11 @@ const HeroFireFox = styled.button`
   color: var(--vdark-blue);
   font-family: "Rubik", san-serif;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-  transform: scale(1);
   transition: all 0.6s;
 
   :hover {
-    transform: scale(1.2);
+    background-color: white;
+    border: 1px solid var(--vdark-blue);
   }
 `;
 
