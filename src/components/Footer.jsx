@@ -67,6 +67,9 @@ const FLNavItem = styled.div`
   color: var(--grayish-blue);
   letter-spacing: 0.1rem;
   cursor: pointer;
+  :hover {
+    color: var(--soft-red);
+  }
 
   @media (min-width: 750px) {
     margin: 0;
