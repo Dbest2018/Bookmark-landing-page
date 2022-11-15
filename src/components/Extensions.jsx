@@ -120,6 +120,12 @@ const ExtensionButton = styled.button`
   background-color: var(--soft-blue);
   border: none;
   border-radius: 0.3rem;
+
+  :hover {
+    color: var(--soft-blue);
+    background-color: white;
+    border: 1px solid var(--soft-blue);
+  }
 `;
 
 export default Extensions;
